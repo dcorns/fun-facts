@@ -7,7 +7,7 @@ import java.util.Random;
  */
 public class FactBook {
     //fields (properties)
-    String[] facts = {
+    private String[] mfacts = {
             "No Food in the Library", "Study rooms are limited to 2 hours per day",
             "Study Rooms are first come, first serve", "I like working at the library",
             "Library hours are too short", "I use the library more for the Internet access than the books"
@@ -15,7 +15,7 @@ public class FactBook {
     //Methods
     public String getFact(){
         Random randomGenerator = new Random();
-        int randomNumber = randomGenerator.nextInt(facts.length);
-        return facts[randomNumber];
+        int randomNumber = randomGenerator.nextInt(mfacts.length);
+        return mfacts[randomNumber];
     }
 }
