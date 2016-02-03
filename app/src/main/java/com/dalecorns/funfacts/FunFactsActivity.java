@@ -12,6 +12,7 @@ public class FunFactsActivity extends AppCompatActivity {
 //Declare our view variables
     private TextView mFactTextView;
     private Button mShowFactButton;
+    private FactBook mFactBook = new FactBook();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,13 +23,9 @@ public class FunFactsActivity extends AppCompatActivity {
         View.OnClickListener listener = new View.OnClickListener(){
             @Override
         public void onClick(View v){
-
-                //update with new fact
-                String fact = "";
                 //randomly select a fact
-
+                String fact = mFactBook.getFact();
                 //Update the screen with new fact
-
                 mFactTextView.setText(fact);
             }
         };
